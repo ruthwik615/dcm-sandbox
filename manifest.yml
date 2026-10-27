@@ -1,0 +1,24 @@
+manifest_version: 2
+type: DCM_PROJECT
+
+default_target: DCM_DEV
+
+targets:
+  DCM_DEV:
+    account_identifier: WJKYXCX-SJ83140 # <-- replace with your account identifier (ORGNAME-ACCOUNTNAME)
+    project_name: DCM_SANDBOX.PROJECTS.SAMPLE_DEV
+    project_owner: DCM_DEVELOPER
+    templating_config: DEV
+
+  DCM_QA:
+    account_identifier: WJKYXCX-SJ83140 # <-- same account for a trial; use a second one if you have it
+    project_name: DCM_SANDBOX.PROJECTS.SAMPLE_QA
+    project_owner: DCM_DEVELOPER
+    templating_config: QA
+
+templating:
+  configurations:
+    DEV:
+      env_suffix: "_DEV"
+    QA:
+      env_suffix: "_QA"
